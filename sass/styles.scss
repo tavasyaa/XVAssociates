@@ -1,6 +1,6 @@
 @import 'materialize';
 
-// fix margin on everything
+// fix alignment stuff
 
 html {
   scroll-behavior: smooth;
@@ -36,9 +36,17 @@ img {
 	margin-right: 5vw;
 }
 
-.section1 {
-	height: 80vh;
-	display: flex;
+
+
+// alignment
+@media only screen and (min-width: 600px) {
+	.section1, .section3 {
+		display: flex;
+	}
+
+	.section1 {
+		height: 80vh;
+	}
 }
 
 .btn {
@@ -46,12 +54,11 @@ img {
 }
 
 .section2 {
-	@extend .grey, .lighten-3;
+	@extend .blue-grey, .lighten-5;
 }
 
 .section3 {
 	text-align: left !important;
-	display: flex;
 }
 
 .mission {
@@ -71,13 +78,13 @@ img {
 }
 
 .section4 {
-	@extend .grey, .lighten-3;
+	@extend .blue-grey, .lighten-5;
 	margin-bottom: 10vh;
 
 }
 
 .footer {
-	@extend .black;
+	@extend .blue-grey, .darken-4;
 	height: 35vh;
 	color: white;
 	display: flex;
