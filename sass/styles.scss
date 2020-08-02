@@ -45,12 +45,16 @@ img {
 	}
 
 	.section1 {
-		height: 80vh;
+		height: 80vh !important;
 	}
 }
 
 .btn {
 	background-color: #0facd7;
+}
+
+.quotebutton {
+	margin-bottom: 10vh;
 }
 
 .section2 {
@@ -71,6 +75,11 @@ img {
 	margin-bottom: 10px;
 	margin-right: 5px;
 	margin-left: 5px;
+}
+
+.seemore {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .leadership {
@@ -95,6 +104,14 @@ img {
 	width: auto;
 	max-height: 100px;
 	margin-left: 10px;
+}
+
+// terms and conditions page
+.terms, .faq, .about, .privacy {
+	padding-top: 5vh;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	padding-bottom: 5vh;
 }
 
 
