@@ -7,5 +7,8 @@ To see what's up, clone this repo to your computer and double click the file ind
 
 To do:    
 Gitignore, I've been lazy    
-Actual images, actual copy (to be obtained from Gabe)    
+PHP or js for the form   
 Google Analytics    
+Get rid of the extra js files, maybe css too    
+Hosting decision    
+Navbar on mobile
