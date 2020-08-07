@@ -8,12 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="./css/styles.css" media="screen,projection">
 	<link rel="icon" href="./assets/xvassociates.png">
 	<title>XV Associates | PPE</title>
+	<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 	<nav>
 		<div class="nav-wrapper">
-			<a href="./home.html"><img src="./assets/xvassociates.png" class="navimage" alt="xvassociateslogo"/></a>
+			<a href="./home.html" class="hide-on-med-and-down"><img src="./assets/xvassociates.png" class="navimage" alt="xvassociateslogo"/></a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="./catalog.html">Catalog</a></li>
 				<li><a href="./about.html">About</a></li>
@@ -22,6 +26,14 @@
 			</ul>
 		</div>
 	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="./home.html">Home</a></li>
+		<li><a href="./catalog.html">Catalog</a></li>
+		<li><a href="./about.html">About</a></li>
+		<li><a href="./faq.html">FAQ</a></li>
+		<li><a href="./contact.html">Contact Us</a></li>
+	</ul>
 
 	<div class="section section1 row">
 		<div class="col s12 m6">
@@ -39,7 +51,7 @@
 		<div class="col s12 m6 l3">
 			<div class="card homecard">
 				<div class="card-image">
-					<img src="./assets/homepage.jpg">
+					<img src="./assets/9500-N951.PNG">
 				</div>
 				<div class="card-content">
 					<p><b>9500 N95 Mask</b></p>
@@ -70,10 +82,10 @@
 		<div class="col s12 m6 l3">
 			<div class="card homecard">
 				<div class="card-image">
-					<img src="./assets/KN952.PNG">
+					<img src="./assets/gown.PNG">
 				</div>
 				<div class="card-content">
-					<p><b>KN95 FM0201-966 respirator</b></p>
+					<p><b>Surgical Gown (AAMI Level 3)</b></p>
 				</div>
 
 			</div>
@@ -120,8 +132,11 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="./js/bin/materialize.js"></script>
-
+	<script>
+		$(document).ready(function(){
+    		$('.sidenav').sidenav();
+		});
+	</script>
 </body>
 
 </html>

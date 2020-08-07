@@ -9,15 +9,17 @@
 	<link rel="icon" href="./assets/xvassociates.png">
 
 	<title>XV Associates | PPE</title>
-	<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+   	<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
 	<nav>
 		<div class="nav-wrapper">
-			<a href="./home.html"><img src="./assets/xvassociates.png" class="navimage" alt="xvassociateslogo"/></a>
+			<a href="./home.html" class="hide-on-med-and-down"><img src="./assets/xvassociates.png" class="navimage" alt="xvassociateslogo"/></a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="./catalog.html">Catalog</a></li>
 				<li><a href="./about.html">About</a></li>
@@ -27,9 +29,17 @@
 		</div>
 	</nav>
 
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="./home.html">Home</a></li>
+		<li><a href="./catalog.html">Catalog</a></li>
+		<li><a href="./about.html">About</a></li>
+		<li><a href="./faq.html">FAQ</a></li>
+		<li><a href="./contact.html">Contact Us</a></li>
+	</ul>
+
 	<div class="catalog">
 		<h4>Our Collection</h4><br>
-		<p>To place an order, please navigate to our Contact Us page, or email gabriel.delvecchio@xvassociates.com</p>
+		<p>To place an order, please navigate to our Contact Us page.</p>
 		<div class=" section2 row">
 			<div class="col s12 m6 l4">
 				<div class="card catalogcard">
@@ -137,7 +147,7 @@
 			<div class="col s12 m6 l4">
 				<div class="card catalogcard">
 					<div class="card-image">
-						<img src="./assets/SuzhouN952.PNG">
+						<img src="./assets/SuzhouN951.PNG">
 					</div>
 					<div class="card-content">
 						<p><b>FT-N040 & FT-N058 N95 masks</b> <br>
@@ -209,7 +219,7 @@
 	<div id="modal7" class="modal">
  		<div class="modal-content">
 			<div class="carousel carousel-slider" id="demo-carousel">
-				<a class="carousel-item" href="#one"><img src="./assets/SuzhouN951.PNG"></a>
+				<a class="carousel-item" href="#one"><img src="./assets/SuzhouN952.PNG"></a>
 				<a class="carousel-item" href="#two"><img src="./assets/SuzhouN953.PNG"></a>
 				<a class="carousel-item" href="#three"><img src="./assets/SuzhouN954.PNG"></a>
 				<a class="carousel-item" href="#four"><img src="./assets/SuzhouN955.PNG"></a>
@@ -241,6 +251,8 @@
 	      	});
 		})*/
 		$(document).ready(function() {
+    		$('.sidenav').sidenav();
+
 		    var elems = document.querySelectorAll('.modal');
 		    var instances = M.Modal.init(elems, {
 		   		'onOpenEnd': initCarouselModal
@@ -253,5 +265,6 @@
 		  }
 		});
 	</script>
+
 </body>
 </html>

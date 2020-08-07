@@ -8,11 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="./css/styles.css" media="screen,projection">
 	<link rel="icon" href="./assets/xvassociates.png">
 	<title>XV Associates | PPE</title>
+	<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+
 <body>
 	<nav>
 		<div class="nav-wrapper">
-			<a href="./home.html"><img src="./assets/xvassociates.png" class="navimage" alt="xvassociateslogo"/></a>
+			<a href="./home.html" class="hide-on-med-and-down"><img src="./assets/xvassociates.png" class="navimage" alt="xvassociateslogo"/></a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="./catalog.html">Catalog</a></li>
 				<li><a href="./about.html">About</a></li>
@@ -21,38 +27,42 @@
 			</ul>
 		</div>
 	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="./home.html">Home</a></li>
+		<li><a href="./catalog.html">Catalog</a></li>
+		<li><a href="./about.html">About</a></li>
+		<li><a href="./faq.html">FAQ</a></li>
+		<li><a href="./contact.html">Contact Us</a></li>
+	</ul>
+
 	<br>
 	<br>
 	<div class="contact">
 		<div class="section section4" id="contact">
 			<h5>Get in touch</h5>
 			<div class="row">
-				<form class="col s12" action="agarwal.tavasya@gmail.com" method="post" enctype="text/plain">
+				<form action="https://formspree.io/xaypvrbk" method="POST" class="formspree">
 					<div class="row">
-						<div class="input-field col s6">
-							<input id="first_name" type="text" class="validate">
-							<label for="first_name">First Name</label>
-						</div>
-						<div class="input-field col s6">
-							<input id="last_name" type="text" class="validate">
-							<label for="last_name">Last Name</label>
-						</div>
+						<label class="name">
+							Name:
+							<input type="text" name="name">
+						</label>
 					</div>
 					<div class="row">
-						<div class="input-field col s12">
-							<input id="email" type="email" class="validate">
-							<label for="email">Email</label>
-						</div>
+						<label class="email">
+							Your email address:
+							<input type="text" name="_replyto">
+						</label>
 					</div>
-					<div class="row">
-						<div class="input-field col s12">
-							<textarea id="textarea1" class="materialize-textarea"></textarea>
-							<label for="textarea1">Message</label>
-						</div>
+					<div class="row textareaform">
+						<label>
+							Message:
+							<textarea name="message"></textarea>
+						</label>
 					</div>
-					<div class="row">
-						<a class="waves-effect waves-light btn">Submit</a><br><br>
-					</div>
+				  <!-- your other form fields go here -->
+				  <button type="submit" class="btn">Send</button>
 				</form>
 			</div>
 		</div>
@@ -70,6 +80,11 @@
 			&copy; XV Associates LLC, 2020.
 		</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+    		$('.sidenav').sidenav();
+		});
+	</script>
 
 </body>
 </html>
