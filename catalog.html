@@ -20,7 +20,7 @@
 		<div class="nav-wrapper">
 			<a href="./home.html" class="hide-on-med-and-down"><img src="./assets/xvassociates.png" class="navimage" alt="xvassociateslogo"/></a>
 			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<ul id="nav-mobile" class="right rightadd hide-on-med-and-down">
 				<li><a href="./catalog.html">Catalog</a></li>
 				<li><a href="./about.html">About</a></li>
 				<li><a href="./faq.html">FAQ</a></li>
@@ -175,7 +175,16 @@
 	</div>
 	<div id="modal2" class="modal">
  		<div class="modal-content">
-			<div class="carousel carousel-slider" id="demo-carousel">
+			<div class="carousel carousel-slider center" id="demo-carousel">
+				<div class="carousel-fixed-item center middle-indicator">
+					<div class="left">
+						<a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator">
+						<i class="material-icons left middle-indicator-text">chevron_left</i></a>
+				     </div>
+					<div class="right rightindicator">
+						<a href="Siguiente" class="moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+					</div>
+				</div>
 				<a class="carousel-item" href="#one"><img src="./assets/Sekura-N952.PNG"></a>
 				<a class="carousel-item" href="#one"><img src="./assets/Sekura-N953.PNG"></a>
 				<a class="carousel-item" href="#one"><img src="./assets/Sekura-N954.PNG"></a>
@@ -189,13 +198,21 @@
  		<div class="modal-content">
 			<div class="carousel carousel-slider" id="demo-carousel">
 				<a class="carousel-item" href="#one"><img src="./assets/KN952.PNG"></a>
-
 			</div>
 		</div>
 	</div>
 	<div id="modal4" class="modal">
  		<div class="modal-content">
 			<div class="carousel carousel-slider" id="demo-carousel">
+				<div class="carousel-fixed-item center middle-indicator">
+					<div class="left">
+						<a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator">
+						<i class="material-icons left middle-indicator-text">chevron_left</i></a>
+				     </div>
+					<div class="right">
+						<a href="Siguiente" class="moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+					</div>
+				</div>
 				<a class="carousel-item" href="#one"><img src="./assets/facemask2.PNG"></a>
 				<a class="carousel-item" href="#two"><img src="./assets/facemask3.PNG"></a>
 				<a class="carousel-item" href="#three"><img src="./assets/facemask.png"></a>
@@ -220,6 +237,15 @@
 	<div id="modal7" class="modal">
  		<div class="modal-content">
 			<div class="carousel carousel-slider" id="demo-carousel">
+				<div class="carousel-fixed-item center middle-indicator">
+					<div class="left">
+						<a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator">
+						<i class="material-icons left middle-indicator-text">chevron_left</i></a>
+				     </div>
+					<div class="right">
+						<a href="Siguiente" class="moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+					</div>
+				</div>
 				<a class="carousel-item" href="#one"><img src="./assets/SuzhouN952.PNG"></a>
 				<a class="carousel-item" href="#two"><img src="./assets/SuzhouN953.PNG"></a>
 				<a class="carousel-item" href="#three"><img src="./assets/SuzhouN954.PNG"></a>
@@ -254,16 +280,28 @@
 		$(document).ready(function() {
     		$('.sidenav').sidenav();
 
-		    var elems = document.querySelectorAll('.modal');
-		    var instances = M.Modal.init(elems, {
-		   		'onOpenEnd': initCarouselModal
-		   });
+			var elems = document.querySelectorAll('.modal');
+			var instances = M.Modal.init(elems, {
+				'onOpenEnd': initCarouselModal
+			});
 
-		  function initCarouselModal() {
-		    var elems = document.querySelectorAll('.carousel');
-		    var instances = M.Carousel.init(elems, {'fullWidth': true, 'indicators': true, 'transition': 20});
-		    instances[0].set(2);
-		  }
+			$('.moveNextCarousel').click(function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				$('.carousel').carousel('next');
+			});
+
+			$('.movePrevCarousel').click(function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				$('.carousel').carousel('prev');
+				});
+
+			function initCarouselModal() {
+				var elems = document.querySelectorAll('.carousel');
+				var instances = M.Carousel.init(elems, {'fullWidth': true, 'indicators': true, 'transition': 20});
+				instances[0].set(2);
+			}
 		});
 	</script>
 

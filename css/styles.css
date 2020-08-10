@@ -8113,7 +8113,7 @@ img {
   margin-left: 10px;
 }
 
-.right {
+.rightadd {
   margin-right: 15px;
 }
 
@@ -8312,6 +8312,19 @@ img {
 .textareaform {
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+.middle-indicator {
+  position: absolute;
+  top: 50%;
+}
+
+.middle-indicator-text {
+  font-size: 4.2rem;
+}
+
+a.middle-indicator-text {
+  color: white !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
