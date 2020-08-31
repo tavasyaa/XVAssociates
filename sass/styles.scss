@@ -1,13 +1,15 @@
 @import 'materialize';
+$base-blue: #0facd7;
 
 // fix alignment stuff
+// this is one commit behind the xvwebsite live, there's some text changes etc that went on there not here
 
 html {
   scroll-behavior: smooth;
 }
 
 nav {
-	background-color: #0facd7;
+	background-color: $base-blue;
 }
 
 img {
@@ -54,7 +56,7 @@ img {
 }
 
 .btn {
-	background-color: #0facd7;
+	background-color: $base-blue;
 }
 
 .quotebutton {
